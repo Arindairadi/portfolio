@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arinda Iradi | Professional Portfolio</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body style="margin: 0; font-family: 'Poppins', sans-serif; overflow-x: hidden;">
+
+  <!-- Hero with Photo Background -->
+  <section style="
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+    z-index: 1;
+  ">
+    <!-- Background Photo (Replace URL) -->
+    <div style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('iradi.jpg') center/cover;
+      z-index: -1;
+    "></div>
+    <!-- Gradient Overlay -->
+    <div style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(5, 150, 105, 0.8) 0%, rgba(16, 185, 129, 0.9) 100%);
+      z-index: -1;
+    "></div>
+
+    <!-- Hero Content -->
+    <div style="max-width: 600px; animation: fadeIn 1s ease-out;">
+      <h1 style="font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; line-height: 1.2; letter-spacing: -1px;">Arinda Iradi</h1>
+      <p style="font-size: 1.25rem; opacity: 0.9; margin: 1.5rem 0 2rem; position: relative; display: inline-block;">
+        <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 20px; backdrop-filter: blur(5px);">
+          Senior Tech enthusiast & Developer
+        </span>
+      </p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="#work" style="
+          background: white;
+          color: #059669;
+          padding: 0.8rem 1.8rem;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.3s;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" 
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">View My Work →</a>
+        <a href="#contact" style="
+          border: 2px solid white;
+          color: white;
+          padding: 0.8rem 1.8rem;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s;
+          backdrop-filter: blur(5px);
+        " onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='translateY(-3px)'" 
+        onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Floating Scroll Indicator -->
+    <div style="
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: float 2s ease-in-out infinite;
+    ">
+      <i class="fas fa-chevron-down" style="font-size: 1.5rem;"></i>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <nav id="navbar" style="
+    background: white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    padding: 1rem 10%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s;
+  ">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: #059669;">Arinda Iradi</div>
+      <ul style="list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0;">
+        <li><a href="#work" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: all 0.3s;" 
+          onmouseover="this.style.color='#059669'" onmouseout="this.style.color='#4b5563'">Work</a></li>
+        <li><a href="#skills" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: all 0.3s;" 
+          onmouseover="this.style.color='#059669'" onmouseout="this.style.color='#4b5563'">Skills</a></li>
+        <li><a href="#about" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: all 0.3s;" 
+          onmouseover="this.style.color='#059669'" onmouseout="this.style.color='#4b5563'">About</a></li>
+        <li><a href="#contact" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: all 0.3s;" 
+          onmouseover="this.style.color='#059669'" onmouseout="this.style.color='#4b5563'">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Work Section -->
+  <section id="work" style="padding: 8rem 10%; background: #f8fafc;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: 'Playfair Display', serif; text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: #1e293b;">Selected Projects</h2>
+      <p style="text-align: center; color: #64748b; max-width: 600px; margin: 0 auto 4rem;">Here are some of my best works combining design and development</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem;">
+        <!-- Project 1 -->
+        <div class="project-card" style="
+          background: white;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          position: relative;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 25px -5px rgba(0,0,0,0.15)'" 
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.1)'">
+          <div style="position: relative; overflow: hidden; height: 240px;">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Project 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" 
+            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(to top, rgba(5,150,105,0.8), transparent);
+              padding: 1.5rem;
+              color: white;
+            ">
+              <h3 style="margin: 0; font-size: 1.5rem;">Sustainable E-Commerce</h3>
+              <p style="margin: 0.5rem 0 0; opacity: 0.9;">UI/UX Design • React • Node.js</p>
+            </div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <p style="color: #64748b; margin-bottom: 1.5rem;">A full-featured e-commerce platform focused on sustainable products with custom analytics dashboard.</p>
+            <div style="display: flex; gap: 1rem;">
+              <a href="#contact" style="
+                color: #059669;
+                text-decoration: none;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: all 0.3s;
+              " onmouseover="this.style.color='#047857'; this.style.gap='0.7rem'" 
+              onmouseout="this.style.color='#059669'; this.style.gap='0.5rem'">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="#contact" style="
+                color: #059669;
+                text-decoration: none;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: all 0.3s;
+              " onmouseover="this.style.color='#047857'; this.style.gap='0.7rem'" 
+              onmouseout="this.style.color='#059669'; this.style.gap='0.5rem'">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card" style="
+          background: white;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          position: relative;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 25px -5px rgba(0,0,0,0.15)'" 
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.1)'">
+          <div style="position: relative; overflow: hidden; height: 240px;">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Project 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" 
+            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(to top, rgba(5,150,105,0.8), transparent);
+              padding: 1.5rem;
+              color: white;
+            ">
+              <h3 style="margin: 0; font-size: 1.5rem;">Health & Wellness App</h3>
+              <p style="margin: 0.5rem 0 0; opacity: 0.9;">React Native • Firebase • AI</p>
+            </div>
+          </div>
+          <div style="padding: 1.5rem;">
+            <p style="color: #64748b; margin-bottom: 1.5rem;">A mobile app that tracks fitness progress with AI-powered recommendations and community features.</p>
+            <div style="display: flex; gap: 1rem;">
+              <a href="#contact" style="
+                color: #059669;
+                text-decoration: none;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: all 0.3s;
+              " onmouseover="this.style.color='#047857'; this.style.gap='0.7rem'" 
+              onmouseout="this.style.color='#059669'; this.style.gap='0.5rem'">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="#contact" style="
+                color: #059669;
+                text-decoration: none;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: all 0.3s;
+              " onmouseover="this.style.color='#047857'; this.style.gap='0.7rem'" 
+              onmouseout="this.style.color='#059669'; this.style.gap='0.5rem'">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" style="padding: 8rem 10%; background: linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 1rem; color: #1e293b;">My Expertise</h2>
+      <p style="color: #64748b; max-width: 600px; margin: 0 auto 4rem;">Combining technical skills with creative problem-solving</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <!-- Design Skills -->
+        <div style="
+          background: white;
+          border-radius: 16px;
+          padding: 2.5rem;
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+          transition: all 0.3s;
+          border-top: 4px solid #059669;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px -5px rgba(0,0,0,0.1)'" 
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.05)'">
+          <div style="
+            width: 60px;
+            height: 60px;
+            background: #d1fae5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+          ">
+            <i class="fas fa-pencil-ruler" style="font-size: 1.8rem; color: #059669;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; margin: 0 0 1rem; color: #1e293b;">Design</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> UI/UX Design
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> Prototyping
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> Design Systems
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Development Skills -->
+        <div style="
+          background: white;
+          border-radius: 16px;
+          padding: 2.5rem;
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+          transition: all 0.3s;
+          border-top: 4px solid #059669;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px -5px rgba(0,0,0,0.1)'" 
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.05)'">
+          <div style="
+            width: 60px;
+            height: 60px;
+            background: #d1fae5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+          ">
+            <i class="fas fa-code" style="font-size: 1.8rem; color: #059669;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; margin: 0 0 1rem; color: #1e293b;">Development</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> web Applications
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> cloud computing
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> Networking
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Other Skills -->
+        <div style="
+          background: white;
+          border-radius: 16px;
+          padding: 2.5rem;
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+          transition: all 0.3s;
+          border-top: 4px solid #059669;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px -5px rgba(0,0,0,0.1)'" 
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.05)'">
+          <div style="
+            width: 60px;
+            height: 60px;
+            background: #d1fae5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+          ">
+            <i class="fas fa-cogs" style="font-size: 1.8rem; color: #059669;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; margin: 0 0 1rem; color: #1e293b;">Other</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> Project Management
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> Agile Methodology
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+              <i class="fas fa-check-circle" style="color: #059669; margin-right: 0.5rem;"></i> Technical Writing
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="padding: 8rem 10%; background: white; display: flex; align-items: center; gap: 4rem; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 300px; position: relative;">
+      <div style="
+        width: 100%;
+        max-width: 400px;
+        height: 500px;
+        background: #d1fae5;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+      ">
+        <!-- Replace with your photo -->
+        <img src="iradi.jpg" alt="Arinda Iradi" style="
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        ">
+        <div style="
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100px;
+          background: linear-gradient(to top, rgba(5,150,105,0.7), transparent);
+        "></div>
+      </div>
+      <div style="
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        width: 150px;
+        height: 150px;
+        background: #059669;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.2;
+      "></div>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 2rem; color: #1e293b;">About Me</h2>
+      <p style="color: #64748b; margin-bottom: 1.5rem; line-height: 1.8;">
+        
+
+I'm Arinda iradi, a passionate and results-driven professional with a strong focus on delivering impactful work. I bring creativity, dedication, and a growth mindset to every project I take on. With experience across multiple fields, I enjoy learning new things, solving problems, and turning ideas into reality.
+
+I'm always open to collaboration, innovation, and meaningful challenges that push boundaries and create lasting value.
+      </p>
+      <p style="color: #64748b; margin-bottom: 2.5rem; line-height: 1.8;">
+        I believe in <strong style="color: #059669;">human-centered design</strong> and <strong style="color: #059669;">clean, maintainable code</strong>. When not designing or coding, you'll find me mentoring junior developers or exploring nature.
+      </p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <div style="
+          background: #f0fdf4;
+          padding: 0.8rem 1.5rem;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        ">
+          <div style="
+            width: 10px;
+            height: 10px;
+            background: #059669;
+            border-radius: 50%;
+          "></div>
+          <span style="color: #059669; font-weight: 500;">Available for freelance</span>
+        </div>
+        <div style="
+          background: #f0fdf4;
+          padding: 0.8rem 1.5rem;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        ">
+          <div style="
+            width: 10px;
+            height: 10px;
+            background: #059669;
+            border-radius: 50%;
+          "></div>
+          <span style="color: #059669; font-weight: 500;">Open to collaborations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section style="padding: 8rem 10%; background: #f8fafc; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 1rem; color: #1e293b;">Client Testimonials</h2>
+      <p style="color: #64748b; max-width: 600px; margin: 0 auto 4rem;">What people I've worked with say about me</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <!-- Testimonial 1 -->
+        <div style="
+          background: white;
+          border-radius: 16px;
+          padding: 2rem;
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+          position: relative;
+          text-align: left;
+        ">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: #d1fae5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -25px;
+            left: 2rem;
+          ">
+            <i class="fas fa-quote-left" style="color: #059669; font-size: 1.2rem;"></i>
+          </div>
+          <p style="color: #64748b; font-style: italic; margin-top: 1.5rem;">
+            "Arinda transformed our web presence with her exceptional design skills and technical expertise. She delivered beyond our expectations."
+          </p>
+          <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+            <div style="
+              width: 40px;
+              height: 40px;
+              background: #e2e8f0;
+              border-radius: 50%;
+              overflow: hidden;
+            ">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="margin: 0; color: #1e293b;">Sarah Johnson</h4>
+              <p style="margin: 0; color: #64748b; font-size: 0.9rem;">CEO, GreenTech Solutions</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div style="
+          background: white;
+          border-radius: 16px;
+          padding: 2rem;
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+          position: relative;
+          text-align: left;
+        ">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: #d1fae5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -25px;
+            left: 2rem;
+          ">
+            <i class="fas fa-quote-left" style="color: #059669; font-size: 1.2rem;"></i>
+          </div>
+          <p style="color: #64748b; font-style: italic; margin-top: 1.5rem;">
+            "Working with Arinda was a game-changer for our startup. Her ability to understand complex requirements and translate them into beautiful interfaces is unmatched."
+          </p>
+          <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+            <div style="
+              width: 40px;
+              height: 40px;
+              background: #e2e8f0;
+              border-radius: 50%;
+              overflow: hidden;
+            ">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <h4 style="margin: 0; color: #1e293b;">Michael Chen</h4>
+              <p style="margin: 0; color: #64748b; font-size: 0.9rem;">CTO, Nova Labs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="padding: 8rem 10%; background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 1.5rem;">Let's Work Together</h2>
+      <p style="max-width: 600px; margin: 0 auto 3rem; opacity: 0.9; font-size: 1.1rem;">
+        Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 500px; margin: 0 auto;">
+        <a href="mailto:iradiarinda63@gmail.com" style="
+          background: white;
+          color: #059669;
+          padding: 1rem 2rem;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.3s;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.2)'" 
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
+          iradiarinda63@gmail.com
+        </a>
+        <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem;">
+          <a href="https://github.com/Arindairadi" style="
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+          " onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='translateY(-3px)'" 
+          onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/arinda-iradi" style="
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+          " onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='translateY(-3px)'" 
+          onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="wa.me0750065243" style="
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+          " onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='translateY(-3px)'" 
+          onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+            <i class="fab fa-dribbble"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="
+    text-align: center;
+    padding: 2rem;
+    background: #1e293b;
+    color: #94a3b8;
+    font-size: 0.9rem;
+  ">
+    <p>© 2024 Arinda Iradi. All rights reserved.</p>
+    <p style="margin: 0.5rem 0 0;">Made with <i class="fas fa-heart" style="color: #f87171;"></i> and green energy</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.style.padding = '0.5rem 10%';
+        navbar.style.background = 'rgba(255,255,255,0.98)';
+      } else {
+        navbar.style.padding = '1rem 10%';
+        navbar.style.background = 'white';
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
